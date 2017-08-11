@@ -30,7 +30,7 @@ class response(models.Model):
         return str('%s %s' %(self.roll_number,self.request_id))
 
 
-class response_frech(models.Model):
+class response_french(models.Model):
     request_id = models.CharField(max_length=16, blank=False)
     name = models.CharField(max_length=100)
     roll_number = models.IntegerField(blank=False)
