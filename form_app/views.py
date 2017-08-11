@@ -108,6 +108,7 @@ def index(request,access_id):
                 form = forms.apply_form_france(request.POST)
 
                 if form.is_valid():
+                    print (" got valid Form \n:")
                     request_id = create_request_id()
                     new_response = response_french()
                     new_response.request_id = request_id
