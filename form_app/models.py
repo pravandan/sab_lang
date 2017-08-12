@@ -42,7 +42,6 @@ class response_french(models.Model):
     payment_amount = models.IntegerField()
     payment_commission_charges = models.IntegerField()
     form_category = models.CharField(max_length=10)
-    class_join_option_sel = models.CharField(max_length=100)
     policy_getting_certificate = models.CharField(max_length=100)
     cancel_policy = models.CharField(max_length=100)
     sel_france_internship = models.CharField(max_length=100)
@@ -51,7 +50,6 @@ class response_french(models.Model):
     designation = models.CharField(max_length=100)
     present_year_of_study = models.CharField(max_length=100)
     taken_french_course = models.CharField(max_length=100)
-    visited_france = models.CharField(max_length=100)
     accepted = models.BooleanField(default=False)
 
     def __str__(self):
