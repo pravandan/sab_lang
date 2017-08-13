@@ -10,7 +10,7 @@ def is_empty(value):
         raise forms.ValidationError("is not empty")
 
 def clean_mobile(value):
-    pattern = re.compile("^([9,8,7]{1})([234789]{1})([0-9]{8})$")
+    pattern = re.compile("^([9,8,7]{1})([0-9]{1})([0-9]{8})$")
     if not pattern.match(str(value)):
         raise forms.ValidationError("Invalid Mobile Number")
 
