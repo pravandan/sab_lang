@@ -161,11 +161,12 @@ def success(request,request_id):
     response_obj = None
     try:
         response_obj = response.objects.get(request_id='IITGL'+request_id)
+        return render(request,'form_app/success.html',{'request_id':request_id})
     except response.DoesNotExist:
         response_obj = None
     try:
         response_obj = response_french.objects.get(request_id='IITGL'+request_id)
-        
+        return render(request,'form_app/success.html',{'request_id':request_id})
     except response_french.DoesNotExist:
         response_obj = None
     if response_obj:
