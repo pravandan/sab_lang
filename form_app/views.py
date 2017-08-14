@@ -165,8 +165,10 @@ def success(request,request_id):
         response_obj = None
     try:
         response_obj = response_french.objects.get(request_id='IITGL'+request_id)
+        
     except response_french.DoesNotExist:
         response_obj = None
     if response_obj:
         return render(request,'form_app/success.html',{'request_id':request_id})
-    return HttpResponse('Invalid')
+    else:
+        return HttpResponse('Invalid')
